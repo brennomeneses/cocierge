@@ -9,3 +9,36 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Funcionario {
+  id   Int    @id @default(autoincrement())
+  name String
+  pis  String
+}
+
+model Dono {
+  id          Int          @id @default(autoincrement())
+  name        String
+  cpf         String       @unique
+  Apartamento Apartamento?
+}
+
+model Apartamento {
+  id      Int  @id @default(autoincrement())
+  number  Int
+  flow    Int
+  owner   Dono @relation(fields: [ownerId], references: [id])
+  ownerId Int  @unique
+}
+
+model Edificio {
+  id Int @id @default(autoincrement())
+  name String
+}
+
+model Visitante {
+  id Int @id @default(autoincrement())
+  name String
+  cpf String @unique
+  phone String
+}

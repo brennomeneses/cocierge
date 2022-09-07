@@ -1,9 +1,8 @@
 import { Router } from 'express';
+import testeController from './controllers/testeController';
 
 const routes = Router();
 
-routes.get("/", (req, res)=>{
-    res.json({funciona: "sim"});
-})
+routes.get("/", testeController.handle);
 
 export default routes;
