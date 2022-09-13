@@ -7,5 +7,6 @@ const app = express();
 app.use(routes);
 
 app.listen(PORT, () => {
+    console.clear();
     console.log(`Server Running on http://localhost:${PORT}`);
 });
