@@ -1,0 +1,149 @@
+:root {
+  --conciergePurple: #8D44AF;
+  --conciergeLightPurple: #CB9BE2;
+  --conciergeBlue: #381B89;
+  --textDefaultColor: white;
+  --textDefaultFont: Roboto Mono;
+  --textBTNSize: 20px;
+  --lightBorder: #F0F0F0;
+}
+.header{
+  height: 66px;
+  width: 100%;
+  background-color: var(--conciergePurple);
+}
+.headerLogo{
+  height: 80%;
+  display: block;
+  padding-top: 15px;
+}
+.mxAuto{
+  margin: 0 auto;
+}
+.body{
+  height: 630px;
+}
+.search{
+  height: 50px;
+  width: 350px;
+  padding: 15px;
+}
+.mainBtns{
+  width: 380px;
+  margin-top: 20px;
+}
+.fLeft{
+  float: left;
+}
+.fRight{
+  float: right;
+}
+.btn{
+  background-color: var(--conciergeLightPurple);
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+.configText{
+  color: var(--textDefaultColor);
+  font-family: var(--textDefaultFont);
+  font-size: var(--textBTNSize);
+}
+.halfBtn{
+  width: 49%;
+}
+.footer{
+  height: 75px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--conciergePurple);
+}
+.footerLeft{
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+.footerWhiteBell{
+  height: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.footerCenter{
+  height: 80%;
+  margin-top: 8px;
+  width: 56%;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  float: left;
+}
+.textFooter{
+  margin-top: 10px;
+}
+.footerRight{
+  height: 60%;
+  width: 13%;
+  border-radius: 60px;
+  margin: 15px;
+  margin-right: 25px;
+  background-color: white;
+  float: right;
+}
+.nearbyTopMenu{
+  height: 55px;
+  width: 43%;
+  margin: 10px;
+  border-bottom: 3px solid black;
+  color: black;
+}
+.selectedFilter{
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 5px;
+  background-color: var(--conciergePurple);
+  border-bottom: 0px;
+}
+.filterText{
+  margin-top: 15px;
+}
+.iconTopMenu{
+  height: 70%;
+  display: block;
+  float: left;
+  margin-top: 10px;
+}
+.topMenu{
+  height: 130px;
+}
+.buildingOptionsClick{
+  width: 95%;
+  height: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: 1px solid var(--lightBorder);
+  margin-top: 15px;
+}
+.topOptions{
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid var(--lightBorder);
+}
+.floatTextMargin{
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.middleOptions{
+  height: 110px;
+  width: 100%;
+  border-bottom: 1px solid var(--lightBorder);
+}
+.bOptions{
+  height: 45px;
+  width: 49%;
+}
+.divBorder{
+  border-left: 1px solid var(--lightBorder);
+}

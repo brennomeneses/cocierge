@@ -1,12 +1,36 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+	<head>
+		<title>Concierge</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="header">
+			<a href="index.html"><img class="headerLogo mxAuto" src="img/headerwhitelogo.png"></a>
+		</div>
+		<div class="body">
+			<div class="search mxAuto">
+				<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+			</div>
+			<div class="mainBtns mxAuto">
+				<a href="#"><div class="btn halfBtn fLeft"><p class="configText text-center">Para<br>Empresas</p></div></a>
+				<a href="#"><div class="btn halfBtn fRight"><p class="configText text-center">Para<br>Residências</p></div></a>
+				<a href="pages/nearby.html"><div class="btn"><p class="configText text-center">Encontre<br>nas Redondezas</p></div></a>
+				<a href="#"><div class="btn"><p class="configText text-center">Ler<br>QRCode</p></div></a>
+			</div>
+		</div>
+		<div class="footer">
+			<a href="pages/admin.html"><div class="footerLeft"><img class="footerWhiteBell" src="img/icons/whiteBell.png"></div></a>
+			<div class="footerCenter"><p class="text-center textFooter configText">Olá, [Username]</p></div>
+			<a href="#"><div class="footerRight"></div></a>
+		</div>
+	</body>
 </html>
