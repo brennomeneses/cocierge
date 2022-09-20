@@ -11,9 +11,10 @@ datasource db {
 }
 
 model Funcionario {
-  id   Int    @id @default(autoincrement())
-  name String
-  pis  String
+  id        Int    @id @default(autoincrement())
+  name      String
+  pis       String
+  Apartment Apartamento?
 }
 
 model Dono {
@@ -24,21 +25,36 @@ model Dono {
 }
 
 model Apartamento {
-  id      Int  @id @default(autoincrement())
-  number  Int
-  flow    Int
-  owner   Dono @relation(fields: [ownerId], references: [id])
-  ownerId Int  @unique
+  id            Int         @id @default(autoincrement())
+  number        Int
+  flow          Int
+  owner         Dono        @relation(fields: [ownerId], references: [id])
+  ownerId       Int         @unique
+  functionary   Funcionario @relation(fields: [functionaryId], references: [id])
+  functionaryId Int         @unique
+  building      Edificio    @relation(fields: [buildingId], references: [id])
+  buildingId    Int         @unique
+  visitas Visita?
 }
 
 model Edificio {
-  id Int @id @default(autoincrement())
-  name String
+  id        Int @id @default(autoincrement())
+  name      String
+  apartment Apartamento?
 }
 
 model Visitante {
-  id Int @id @default(autoincrement())
-  name String
-  cpf String @unique
-  phone String
+  id      Int    @id @default(autoincrement())
+  name    String
+  cpf     String @unique
+  phone   String
+  visitas Visita?
+}
+
+model Visita {
+  id          Int         @id @default(autoincrement())
+  visitor     Visitante   @relation(fields: [idVisistor], references: [id])
+  idVisistor  Int         @unique
+  apartment   Apartamento @relation(fields: [idApartment], references: [id])
+  idApartment Int         @unique
 }

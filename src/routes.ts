@@ -1,8 +1,14 @@
 import { Router } from 'express';
-import testeController from './controllers/testeController';
+import TesteController from './controllers/testeController';
+import VisitorController from './controllers/visitorController';
 
 const routes = Router();
 
-routes.get("/", testeController.handle);
+const testController = new TesteController();
+const visitorController = new VisitorController();
+
+routes.get("/", testController.handle);
+routes.post("/visitors", visitorController.store);
+routes.get("/visitors", visitorController.handle);
 
 export default routes;
