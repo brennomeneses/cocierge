@@ -147,3 +147,6 @@
 .divBorder{
   border-left: 1px solid var(--lightBorder);
 }
+.selected{
+  border-bottom: 3px solid var(--conciergePurple);
+}

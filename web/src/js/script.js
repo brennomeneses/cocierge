@@ -1,14 +1,15 @@
 $(document).ready(function(){
 
-    generateBuildingOptions();
+    generateBuildingOptions(allBuildings);
 
 });
 
-buildingArray = [["Residencial", "Residencial Morada das Palmeiras", 400], ["Comercial John Lennon", "Edifício Comercial John Lennon", 720]];
+allBuildings = [["Residencial", "Residencial Morada das Palmeiras", 400], ["Comercial John Lennon", "Edifício Comercial John Lennon", 720]];
+favoriteBuilding = [["Comercial John Lennon", "Edifício Comercial John Lennon", 720]];
 
-function generateBuildingOptions(){
+function generateBuildingOptions(buildingArray){
 
-  $("#appendContentNearby").html();
+  $("#appendContentNearby").html("");
   content = "";
   for (i = 0; i < buildingArray.length; i++){
     content += '<div class="buildingOptionsClick">';
@@ -18,5 +19,17 @@ function generateBuildingOptions(){
     content += '<a href="#"><img class="footerWhiteBell" src="../img/icons/blackEditIcon.png"></a></div></div>';
   }
   $("#appendContentNearby").append(content);
+
+  $("#nearbyBuildings").click(function(){
+    generateBuildingOptions(allBuildings);
+    $("#favorites").removeClass("selected");
+    $("#nearby").addClass("selected");
+  });
+
+  $("#favoriteBuildings").click(function(){
+    generateBuildingOptions(favoriteBuilding);
+    $("#favorites").addClass("selected");
+    $("#nearby").removeClass("selected");
+  });
 
 }
