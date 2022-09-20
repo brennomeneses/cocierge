@@ -14,7 +14,8 @@ model Funcionario {
   id        Int    @id @default(autoincrement())
   name      String
   pis       String
-  Apartment Apartamento?
+  apartment Apartamento @relation(fields: [idApartment], references: [id])
+  idApartment Int @unique
 }
 
 model Dono {
@@ -30,11 +31,10 @@ model Apartamento {
   flow          Int
   owner         Dono        @relation(fields: [ownerId], references: [id])
   ownerId       Int         @unique
-  functionary   Funcionario @relation(fields: [functionaryId], references: [id])
-  functionaryId Int         @unique
   building      Edificio    @relation(fields: [buildingId], references: [id])
   buildingId    Int         @unique
-  visitas Visita?
+  visitas       Visita?
+  functionary   Funcionario?
 }
 
 model Edificio {
