@@ -1,5 +1,9 @@
 
 # Cocierge
+### Integrantes
+- Anderson Neumann
+- Brenno Araujo
+- Eduardo Ribeiro
 ## Design Patterns
 Foram aplicados no projeto somente dois Design Patterns no projeto.
 - Factory (No back-end nos controllers).
