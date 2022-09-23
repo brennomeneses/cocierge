@@ -1,4 +1,10 @@
+
 # Cocierge
+## Design Patterns
+Foram aplicados no projeto somente dois Design Patterns no projeto.
+- Factory (No back-end nos controllers).
+- Singletone (No front-end nas paginas).
+
 ## Banco de dados & Back-end:
 Foi utilizado o banco de dados PostgreSQL, o back-end é uma API Restful feita em Typescript com Express e Prisma.
 
